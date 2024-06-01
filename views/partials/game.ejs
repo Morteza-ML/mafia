@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="contentAll-2">
+        <div class="parent-plaer">
+            
+            <% for (var i=0; i<4 ; i++){  %>
+                <% if (data.li_users[i] && data.li_users[i] !== name){ %>
+                    <div class="plaer">
+                        <img src="pic/<%= data.li_users[i] %>.jpg" alt="" class="img-2">
+                        <p class="naem-plaer"><%= data.li_users[i] %></p>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+        <div class="me"> 
+            <div class="do-work"> 
+                <img src="pic/taed.png" alt="" class="img-help">
+
+                <% if(cia==="mafia"){ %>
+                    <img src="pic/tofang.png" alt="" class="img-gun">
+                <% }else if(cia ==="doctor"){ %>
+                    <img src="pic/help.png" alt="" class="img-gun">
+                <% } %>
+                
+                
+            </div>
+            <img src="pic/<%= name %>.jpg" alt=""  class="img-me">
+            <p class="naem-plaer"><%= name %></p>
+            
+        </div>
+    </div>
+</body>
+</html>

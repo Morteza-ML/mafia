@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game_mafia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="game" method="post" id="form">
+    
+    <div class="contentAll">
+
+            <% for (var i =0; i<4; i++){ %>
+                <div class="content" value="<%= names.name_user[i] %>">
+                    <img src="pic/<%= names.name_user[i] %>.jpg" alt="" class="img">
+                    <p class="prompt"><%= names.name_user[i] %></p>
+                    <input type="radio" name="usernaem" value="<%= names.name_user[i] %>" class="radio-first-page">
+                </div>
+            <% } %>
+
+            
+    </div>
+    <button class="button-start" type="submit"><p>click the start</p></button>
+    
+    </form>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
